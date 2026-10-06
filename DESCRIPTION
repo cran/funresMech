@@ -1,6 +1,6 @@
 Package: funresMech
 Title: Mechanistic Functional Response Analysis
-Version: 1.0.4
+Version: 1.1.0
 Authors@R: 
     person('Segundo', 'Núñez-Campero', 
            email = 'segundo.nc@conicet.gov.ar', 
@@ -10,6 +10,7 @@ Description: Implements the mechanistic functional response
   host-parasitoid systems. Provides tools for model fitting, likelihood 
   profiling, stochastic simulation, and visualization of parasitism 
   distributions.
+  The stochastic simulation engine is implemented in C++ via 'Rcpp'.
   Includes an interactive 'shiny' application for complete analysis workflows,
   built with 'plotly' for interactive graphics and 'rmarkdown' for
   reproducible reports.
@@ -17,17 +18,18 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 4.1.0)
 Imports: DEoptim, dplyr, future, ggplot2 (>= 3.4.0), magrittr,
-        parallel, plotly, rlang, rmarkdown, shiny, shinyBS,
+        parallel, plotly, Rcpp, rlang, rmarkdown, shiny, shinyBS,
         shinythemes, stats, utils
+LinkingTo: Rcpp
 Suggests: kableExtra, knitr, testthat (>= 3.0.0)
 URL: https://github.com/Segon03/funresMech
 BugReports: https://github.com/Segon03/funresMech/issues
 Config/testthat/edition: 3
 Config/Needs/check: r-lib/actions/dependencies
 Config/roxygen2/version: 8.1.0
-NeedsCompilation: no
-Packaged: 2026-09-15 03:38:09 UTC; Equipo
+NeedsCompilation: yes
+Packaged: 2026-10-06 00:11:08 UTC; Equipo
 Author: Segundo Núñez-Campero [aut, cre]
 Maintainer: Segundo Núñez-Campero <segundo.nc@conicet.gov.ar>
 Repository: CRAN
-Date/Publication: 2026-09-24 14:50:02 UTC
+Date/Publication: 2026-10-06 02:20:02 UTC
